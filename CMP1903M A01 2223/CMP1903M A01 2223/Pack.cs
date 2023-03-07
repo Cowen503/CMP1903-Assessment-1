@@ -12,7 +12,20 @@ namespace CMP1903M_A01_2223
 
         public Pack()
         {
-            //Initialise the card pack here
+            
+            int ind1 = 0;
+            int ind2 = 0;
+            for(int ind1 = 1; ind1 <= 4; ind1++)
+            {
+                for (int ind2 = 1; ind2 <= 13; ind2++)
+                {
+                    Card card = new Card;
+                    card.Suit = ind1;
+                    card.Value = ind2;
+                    pack.Add(card);
+                }
+            }
+            
         }
 
         public static bool shuffleCardPack(int typeOfShuffle)
